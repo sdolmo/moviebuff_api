@@ -8,7 +8,7 @@ var Movie = {
 
   addMovie: function(Movie, callback) {
     console.log(Movie);
-    return db.query('INSERT INTO movies values(?,?,?,?)', [Movie.id, Movie.title, Movie.diretor, Movie.genre], callback);
+    return db.query('INSERT INTO movies SET ?', Movie, callback);
   },
 
   getMovieById: function(id, callback) {

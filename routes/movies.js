@@ -26,7 +26,7 @@ router.post('/', function(req, res, next) {
     if (err) {
       res.json(err);
     } else {
-      res.json(req.body);
+      // res.json(req.body);
       res.send({Message: "Successfully added movie!"});
     }
   })
@@ -55,8 +55,8 @@ router.put('/:id', function(req, res, next) {
     if (err) {
       res.json(err);
     } else {
-      res.json()
-      res.send({Message: "Successfully updated movie!"})
+      // res.json()
+      res.send({Message: "Successfully updated movie!"});
     }
   })
 });
