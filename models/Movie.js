@@ -16,15 +16,11 @@ var Movie = {
   },
 
   updateMovie: function(id, Movie, callback) {
-    return db.query('UPDATE movies SET genre=?, director=? WHERE id=?', [Movie.genre, Movie.director, id], callback);
+    return db.query('UPDATE movies SET title=?, director=?, description=?, genre=?, img=? WHERE id=?', [Movie.title, Movie.director, Movie.description, Movie.genre, Movie.img, id], callback);
   },
 
   deleteMovie: function(id, callback) {
     return db.query('DELETE FROM movies WHERE id=?', [id], callback);
-  },
-
-  remove: function(callback) {
-    return db.query('DELETE FROM movies');
   }
 
 };
