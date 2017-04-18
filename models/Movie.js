@@ -16,10 +16,12 @@ var Movie = {
   },
 
   updateMovie: function(id, Movie, callback) {
+    console.log(Movie);
     return db.query('UPDATE movies SET title=?, director=?, description=?, genre=?, img=? WHERE id=?', [Movie.title, Movie.director, Movie.description, Movie.genre, Movie.img, id], callback);
   },
 
   deleteMovie: function(id, callback) {
+    console.log(id);
     return db.query('DELETE FROM movies WHERE id=?', [id], callback);
   }
 

@@ -50,7 +50,7 @@ router.get('/:id', function(req, res, next) {
 // UPDATE a movie
 //------------------
 
-router.put('/:id', function(req, res, next) {
+router.post('/:id', function(req, res, next) {
   Movie.updateMovie(req.params.id, req.body, function(err, count) {
     if (err) {
       res.json(err);
